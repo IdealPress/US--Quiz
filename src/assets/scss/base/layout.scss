@@ -1,0 +1,49 @@
+.l-container {
+  padding: 30px;
+  width: 100%;
+  height: $app--height;
+  position: relative;
+}
+.l__splash {
+  margin: 50px 0px;
+  width: 45%;
+}
+.l--right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  float: right;
+}
+.l--intros {
+  display: inline-block;
+  position:absolute;
+  width: 32%;
+  bottom: 0;
+  &:nth-of-type(1) {
+    left: 0;
+  }
+  &:nth-of-type(2) {
+    margin-left: 20%;
+  }
+  &:nth-of-type(3) {
+    margin-left: 43%;
+  }
+  &:nth-of-type(4) {
+    right: 0;
+  }
+  .m-btn {
+    position: absolute;
+    bottom: 25px;
+    left: 38%;
+  }
+}
+.l--header {
+  position: absolute;
+  width: 100%;
+  padding: 20px 0px 0px 30px;
+  background: $color-primary;
+  h4 {
+    display: inline-block;
+    margin-left: 20px;
+  }
+}

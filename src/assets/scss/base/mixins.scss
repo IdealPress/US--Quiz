@@ -1,0 +1,26 @@
+// Base font size
+$base-font-size-for-rem-calc: 16;
+
+@mixin rem-polyfill($desired-rem-size) {
+  font-size: ($desired-rem-size * $base-font-size-for-rem-calc) + px;
+  font-size: $desired-rem-size + rem;
+}
+
+@mixin font-size($desired-pixel-size) {
+  $desired-rem-size: $desired-pixel-size / $base-font-size-for-rem-calc;
+  font-size: ($desired-rem-size * $base-font-size-for-rem-calc) + px;
+  font-size: $desired-rem-size + rem;
+}
+
+// Font type
+
+@font-face {
+  font-family: 'SciFly';
+  src: url('~@/assets/fonts/SciFly-Sans.woff') format('woff');
+}
+
+@mixin font() {
+  font-family: 'SciFly';
+  font-style: normal;
+  font-weight: 400;
+}

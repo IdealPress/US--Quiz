@@ -1,0 +1,22 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  min-width: 320px;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.wrapper {
+  position: relative;
+}
