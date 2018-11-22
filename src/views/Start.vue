@@ -2,7 +2,7 @@
   <div>
     <div class="m-background m-background--media-1"></div>
     <Brand />
-    <div class="l-container">
+    <div class="l-container l-pad">
       <p>Here's your chance to have a sneak peek into the world of a group of university students, who like together.</p>
       <p>As you explore their flat you'll encounter five different situations with potential solutions.</p>
       <p>Think about how you'd react to discover which student has the closest personality to yours.</p>

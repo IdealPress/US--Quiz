@@ -3,7 +3,7 @@
     <div class="m-background m-background--media-1"></div>
     <div class="m-background__overlay"></div>
     <Brand />
-    <div class="l-container">
+    <div class="l-container l-pad">
       <h3>Meet the students</h3>
       <div class="l--intros"
       v-for="student in getStudents"

@@ -2,7 +2,7 @@
   <div>
     <div class="m-background m-background--media-1"></div>
     <div class="m-background__overlay"></div>
-    <div class="l-container">
+    <div class="l-container l-pad">
       <img class="l--right" src="../assets/images/students/students__all.png">
       <img src="../assets/images/logos/logo__unite.png">
       <h1 class="l__splash">Are you ready for the leap?</h1>

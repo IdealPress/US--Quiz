@@ -1,8 +1,10 @@
 .l-container {
-  padding: 30px;
   width: 100%;
   height: $app--height;
   position: relative;
+}
+.l-pad {
+  padding: 30px;
 }
 .l__splash {
   margin: 50px 0px;
@@ -38,11 +40,10 @@
   }
 }
 .l--header {
-  position: absolute;
   width: 100%;
   padding: 20px 0px 0px 30px;
   background: $color-primary;
-  h4 {
+  h3 {
     display: inline-block;
     margin-left: 20px;
   }
