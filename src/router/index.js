@@ -27,7 +27,7 @@ export default new Router({
       component: Intros
     },
     {
-      path: '/intros/intro',
+      path: '/intro/:id',
       name: 'intro',
       component: Intro
     }

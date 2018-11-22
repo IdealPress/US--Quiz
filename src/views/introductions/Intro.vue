@@ -1,25 +1,23 @@
 <template>
-  <div>
-    <div class="l--header">
-      <router-link :to="{ name: 'intros' }">X</router-link>
-      <h4></h4>
-    </div>
-    <Brand />
-    <div class="l-container">
-    </div>
-  </div>
+  <h1>{{ students[thisStudent].name }}</h1>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import Brand from '../../components/Brand'
 
 export default {
-  components: {
-    Brand
+  data () {
+    return {
+      thisStudent: this.$route.params.id - 1
+    }
   },
   computed: {
-    ...mapGetters(['getStudents'])
+    students () {
+      return this.$store.state.students
+    }
+  },
+  components: {
+    Brand
   },
   name: 'Intro'
 }
