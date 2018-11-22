@@ -65,7 +65,9 @@ export default new Vuex.Store({
 
   },
   getters: {
-    getStudents: state => state.students
+    getStudents: state => state.students,
+    getStudent: state => payload => state.students.find(student => student.id === payload),
+    getStudentByName: state => payload => state.students.find(student => student.name === payload)
   },
   actions: {
 
