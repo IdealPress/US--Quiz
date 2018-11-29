@@ -2,16 +2,16 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 // VIEWS
-import Home from '../views/home'
-import Start from '../views/start'
-import Intros from '../views/introductions/intros'
-import Intro from '../views/introductions/intro'
-import Reception from '../views/rooms/reception'
-import CommunualArea from '../views/rooms/communualarea'
-import Bedroom from '../views/rooms/bedroom'
-import Kitchen from '../views/rooms/kitchen'
-import Question from '../views/question'
-import Feedback from '../views/feedback'
+import Home from '../views/Home'
+import Start from '../views/Start'
+import Intros from '../views/introductions/Intros'
+import Intro from '../views/introductions/Intro'
+import Reception from '../views/rooms/Reception'
+import CommunualArea from '../views/rooms/Communualarea'
+import Bedroom from '../views/rooms/Bedroom'
+import Kitchen from '../views/rooms/Kitchen'
+import Question from '../views/Question'
+import Feedback from '../views/Feedback'
 
 Vue.use(Router)
 
