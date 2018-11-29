@@ -12,9 +12,17 @@
 .m-background--media-1 {
   background-image:url('~@/assets/images/backgrounds/bg__exterior.jpg');
 }
-
 .m-background--media-2 {
   background-image:url('~@/assets/images/backgrounds/bg__reception.jpg');
+}
+.m-background--media-3 {
+  background-image:url('~@/assets/images/backgrounds/bg__communual.jpg');
+}
+.m-background--media-4 {
+  background-image:url('~@/assets/images/backgrounds/bg__bedroom.jpg');
+}
+.m-background--media-5 {
+  background-image:url('~@/assets/images/backgrounds/bg__kitchen.jpg');
 }
 
 .m-background__overlay {
@@ -23,6 +31,32 @@
     width: 100%;
     height: 100%;
     background-color: $color-bg-yellow;
+    opacity: 0.92;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+  }
+}
+
+.m-background__overlay-blue {
+  &:before {
+    content:' ';
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary;
+    opacity: 0.92;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+  }
+}
+
+.m-background__overlay-purple {
+  &:before {
+    content:' ';
+    width: 100%;
+    height: 100%;
+    background-color: $color-purple;
     opacity: 0.92;
     position: absolute;
     background-size: cover;
