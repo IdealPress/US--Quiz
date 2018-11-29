@@ -11,7 +11,7 @@ export default new Vuex.Store({
     students: [
       {
         id: 1,
-        name: 'Advik',
+        name: 'advik',
         age: '19',
         studying: 'Physiotherapy',
         catchphrase: 'Sounds good! Let me revise for one more hour and then I’ll come join you!',
@@ -24,7 +24,7 @@ export default new Vuex.Store({
       },
       {
         id: 2,
-        name: 'Jake',
+        name: 'jake',
         age: '19',
         studying: 'Drama',
         catchphrase: 'Sorry, I’ve got a big exam coming up, so I can’t really hang out with you guys.',
@@ -37,7 +37,7 @@ export default new Vuex.Store({
       },
       {
         id: 3,
-        name: 'Mel',
+        name: 'mel',
         age: '20',
         studying: 'Civil Engineering',
         catchphrase: 'Come on, even C’s get degrees. I’m going clubbing!',
@@ -50,7 +50,7 @@ export default new Vuex.Store({
       },
       {
         id: 4,
-        name: 'Kaya',
+        name: 'kaya',
         age: '18',
         studying: 'Law',
         catchphrase: 'I want it all – high-flying career, big car, luxury flat. And I’m willing to work hard to make sure I get it.',

@@ -9,7 +9,7 @@
       v-for="student in getStudents"
       :key="student.id">
         <router-link class="m-btn m-btn--left m-btn__primary"
-        :to="{ name: 'intro', params: {id: student.id } }">
+        :to="{ name: 'intro', params: {id: student.name } }">
           {{ student.name }}
         </router-link>
         <img :src='student.image'>

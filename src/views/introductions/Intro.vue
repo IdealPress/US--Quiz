@@ -1,18 +1,19 @@
 <template>
   <div>
     <div class="l--header">
-      <router-link :to="{ name: 'intros' }">X</router-link> <h3>{{ student.name }}</h3>
+      <router-link :to="{ name: 'intros' }">X</router-link> <h3>{{ studentByName.name }}</h3>
     </div>
     <Brand />
     <div class="l-container">
       <div class="l--intros-left">
-        <p><span>Name:</span> {{ student.name }}</p>
-        <p><span>Age:</span> {{ student.age }}</p>
-        <p><span>Studying:</span> {{ student.studying }}</p>
-        <p><span>Can be heard saying:</span> {{ student.catchphrase }}</p>
-        <p><span>Profile:</span> {{ student.profile }}</p>
+        <!-- Use CSS to capitalize the first letter of the name -->
+        <p><span>Name:</span> {{ studentByName.name }}</p>
+        <p><span>Age:</span> {{ studentByName.age }}</p>
+        <p><span>Studying:</span> {{ studentByName.studying }}</p>
+        <p><span>Can be heard saying:</span> {{ studentByName.catchphrase }}</p>
+        <p><span>Profile:</span> {{ studentByName.profile }}</p>
       </div>
-      <img :src='student.image'>
+      <img :src='studentByName.image'>
       <div class="l--color-bg">
         <div class="p-video">
           <div class="p-speaker"></div>
@@ -37,13 +38,18 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getStudent']),
+    ...mapGetters(['getStudent', 'getStudentByName']),
     students () {
       return this.$store.state.students
     },
     student () {
       const studentID = parseInt(this.thisStudent, 10)
+      console.log(this.thisStudent);
       return this.getStudent(studentID)
+    },
+    studentByName () {
+      const studentName = this.thisStudent
+      return this.getStudentByName(studentName)
     }
   },
   components: {
