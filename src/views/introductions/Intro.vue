@@ -44,7 +44,6 @@ export default {
     },
     student () {
       const studentID = parseInt(this.thisStudent, 10)
-      console.log(this.thisStudent);
       return this.getStudent(studentID)
     },
     studentByName () {
