@@ -1,19 +1,19 @@
 <template>
   <div>
     <div class="l--header">
-      <router-link :to="{ name: 'intros' }">X</router-link> <h4>{{ student.name }}</h4>
+      <router-link :to="{ name: 'intros' }">X</router-link> <h4>{{ studentByName.name }}</h4>
     </div>
     <Brand />
     <div class="l-container">
       <div class="l--intros-left">
-        <p><span>Name:</span> {{ student.name }}</p>
-        <p><span>Age:</span> {{ student.age }}</p>
-        <p><span>Studying:</span> {{ student.studying }}</p>
-        <p><span>Can be heard saying:</span> {{ student.catchphrase }}</p>
-        <p><span>Profile:</span> {{ student.profile }}</p>
+        <p class="capitalize"><span>Name:</span> {{ studentByName.name }}</p>
+        <p><span>Age:</span> {{ studentByName.age }}</p>
+        <p><span>Studying:</span> {{ studentByName.studying }}</p>
+        <p><span>Can be heard saying:</span> {{ studentByName.catchphrase }}</p>
+        <p><span>Profile:</span> {{ studentByName.profile }}</p>
         <router-link :to="{ name: 'reception' }">></router-link>
       </div>
-      <img :src='student.image' class="student-image">
+      <img :src='studentByName.image' class="student-image">
       <div class="l--color-bg">
         <div class="p-video">
           <div class="p-speaker"></div>
@@ -42,10 +42,14 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getStudent']),
+    ...mapGetters(['getStudent', 'getStudentByName']),
     student () {
       const studentID = parseInt(this.thisStudent, 10)
       return this.getStudent(studentID)
+    },
+    studentByName () {
+      const studentName = this.thisStudent
+      return this.getStudentByName(studentName)
     }
   },
   components: {

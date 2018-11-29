@@ -62,6 +62,10 @@ p {
   }
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
 strong {
   // @include font-bold();
 }
