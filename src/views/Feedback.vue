@@ -26,7 +26,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getRoom', 'getRoomQuestions', 'getQuestionsAnswered']),
+    ...mapGetters(['getRoom', 'getRoomQuestions', 'getQuestionsAnswered', 'getScore']),
     room () {
       const roomID = parseInt(this.thisRoom, 10)
       return this.getRoom(roomID)

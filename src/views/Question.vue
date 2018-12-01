@@ -8,7 +8,7 @@
         <p class="question">{{currentQuestion.question}}</p>
         <ul>
             <li v-for="answer in currentQuestion.answers" :key="answer.id">
-              <a @click="answerQuestion(currentQuestion.id, answer.id, thisRoom, currentQuestion.relativeID);" >
+              <a @click="answerQuestion(currentQuestion.id, answer.id, thisRoom, currentQuestion.relativeID, answer.student, answer.weight);" >
                 {{answer.text}}
               </a>
             </li>
@@ -30,7 +30,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getRoom', 'getRoomQuestions', 'getScore']),
+    ...mapGetters(['getRoom', 'getRoomQuestions']),
     room () {
       const roomID = parseInt(this.thisRoom, 10)
       return this.getRoom(roomID)
@@ -47,10 +47,11 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['saveAnswer', 'incrementQuestionsAnswered']),
-    answerQuestion (questionID, answerID, routeRoom, routeQuestion) {
+    ...mapActions(['saveAnswer', 'incrementQuestionsAnswered', 'updateScore']),
+    answerQuestion (questionID, answerID, routeRoom, routeQuestion, student, answerWeight) {
       this.saveAnswer([questionID, answerID])
       this.incrementQuestionsAnswered()
+      this.updateScore([student, answerWeight])
       this.$router.push({ name: 'feedback', params: { room: routeRoom, question: routeQuestion, answer: answerID } })
     }
   },
