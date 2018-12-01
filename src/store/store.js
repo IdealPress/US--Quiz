@@ -23,6 +23,9 @@ export default new Vuex.Store({
                  'His mild manner sometimes means that he doesn’t speak up about things that bother him. ' +
                  'He’s the unofficial ‘counsellor’ who everyone goes to with their worries and knows they’ll get care and support. ' +
                  'He manages money well and does more than his share of the chores, without complaint.',
+        result: 'You strike a good balance between your studies and opportunities to socialise and have fun. ' +
+                'You’re considerate of others. In fact, you’re so nice that you sometimes find it difficult to speak up about something that bothers you. ' +
+                'Remember that it’s important to get any problems out in the open, or they can escalate. ',
         image: require('@/assets/images/students/advik-1.png')
         // video: require('@/assets/videos/advik/advik-1.mp4')
       },
@@ -36,6 +39,10 @@ export default new Vuex.Store({
                  'What he lacks in tidiness, organisation and money management, he makes up for in heart. ' +
                  'He’s the first to apologise if he has upset someone. ' +
                  'He’s pretty easy-going and gets on well with everyone – but can’t seem to build a relationship with his textbooks!',
+        result: 'You love to party and don’t let things like studying get in the way of your ability to have a good time. ' +
+                'But you also care about others and hate the thought of offending anyone. ' +
+                'Remember that, while there’s definitely time for socialising, students also need a good chunk of quiet study time. ' +
+                'Try to create a comfortable balance between work and play.',
         image: require('@/assets/images/students/jake-1.png')
         // video: require('@/assets/videos/jake/jake-1.mp4')
       },
@@ -49,6 +56,9 @@ export default new Vuex.Store({
                  'She’s at university to study, not to make friends. ' +
                  'But she’s super-organised and seen as the first port of call when something practical needs to get done. ' +
                  'She’s sensible with money (in fact, she keeps a spreadsheet of expenses) and likes to keep the place clean and tidy.',
+        result: 'You’re dedicated to your studies and prefer to focus on them rather than socialising. ' +
+                'Remember that friendship and support can help to motivate you and help you face any challenges. ' +
+                'Try to create a comfortable balance between work and play.',
         image: require('@/assets/images/students/mel-1.png')
         // video: require('@/assets/videos/mel/mel-1.mp4')
       },
@@ -61,6 +71,9 @@ export default new Vuex.Store({
         profile: 'Kaya doesn’t exactly enjoy studying but she’s focused on her degree and determined to stop at nothing to reach her goals. ' +
                  'This sometimes means she doesn’t make time to do other things like chores or keep track of her spending. ' +
                  'She loves going out and being centre of attention, but she’s often absorbed in her own world, daydreaming about what the future holds and what sort of a lawyer she will be.',
+        result: 'You’re very focused on your goals and you do everything you can to achieve them. ' +
+                'Remember that having a happy, comfortable living environment can help you feel more relaxed and able to concentrate. ' +
+                'It’s important to consider others as well as yourself.',
         image: require('@/assets/images/students/kaya-1.png')
         // video: require('@/assets/videos/kaya/kaya-1.mp4')
       }
