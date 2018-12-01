@@ -80,8 +80,8 @@ export default new Vuex.Store({
     ],
     questions: [
       {
-        room: 1, // Communual Area
         id: 1,
+        room: 1, // Communual Area
         question: 'Your flatmates invite you out for dinner, but you don’t have enough money. What do you do?',
         answers: [
           {
@@ -114,8 +114,8 @@ export default new Vuex.Store({
              'There are lots of discounts offered to students – it’s worth researching what’s available in your local area. And shop around for the best deal.'
       },
       {
-        room: 1, // Communual Area
         id: 2,
+        room: 1, // Communual Area
         question: 'Your flatmate is stressed out about their coursework. They keep shutting themselves away in their room. What do you do?',
         answers: [
           {
@@ -148,8 +148,8 @@ export default new Vuex.Store({
              'Most universities also have people you can go to see for advice and support so it’s always worth checking this option out if you are struggling a bit.'
       },
       {
-        room: 2, // Bedroom
         id: 1,
+        room: 2, // Bedroom
         question: 'You’re trying to study for an exam in the morning, but your flatmate has friends over and they’re playing music and messing around in the kitchen, being really loud. What do you do?',
         answers: [
           {
@@ -182,8 +182,8 @@ export default new Vuex.Store({
              'Politely let your flatmates know when you’ve got important course dates coming up, so they can avoid organising loud gatherings and give you the time you need to concentrate on doing your best.'
       },
       {
-        room: 3, // Kitchen
         id: 1,
+        room: 3, // Kitchen
         question: 'The kitchen’s a mess and there’s a note on the fridge saying, ‘Stop stealing my milk!!!!’. What do you do?',
         answers: [
           {
@@ -216,8 +216,8 @@ export default new Vuex.Store({
              'Speak with your flatmates and agree how you want to organise your shared space. It can help to set some ‘house rules’ at the beginning so everyone knows what the expectation is and encourage everyone to follow them – even guests.'
       },
       {
-        room: 3, // Kitchen
         id: 2,
+        room: 3, // Kitchen
         question: 'When you first moved in, all the flatmates ate dinner together and had a laugh, but now people have gone off in their own little groups. You’re feeling a bit lonely. What do you do?',
         answers: [
           {
