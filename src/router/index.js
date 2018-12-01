@@ -12,7 +12,7 @@ import Bedroom from '../views/rooms/Bedroom'
 import Kitchen from '../views/rooms/Kitchen'
 import Question from '../views/Question'
 import Feedback from '../views/Feedback'
-import End from '../views/End'
+import Result from '../views/Result'
 
 Vue.use(Router)
 
@@ -69,9 +69,9 @@ export default new Router({
       component: Feedback
     },
     {
-      path: '/end',
-      name: 'end',
-      component: End
+      path: '/result',
+      name: 'result',
+      component: Result
     }
   ]
 })

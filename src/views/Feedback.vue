@@ -44,7 +44,7 @@ export default {
       if (this.questionsAnswered < 5) {
         this.$router.push({ name: routeRoom })
       } else {
-        this.$router.push({ name: 'end' })
+        this.$router.push({ name: 'result' })
       }
     }
   },

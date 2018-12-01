@@ -301,6 +301,7 @@ export default new Vuex.Store({
     updateScore (state, payload) {
       const student = this.getters.getScoreByName(payload[0])
       student.score += payload[1]
+      console.log('Student Response: ' + student.name)
     }
   },
   methods: {
