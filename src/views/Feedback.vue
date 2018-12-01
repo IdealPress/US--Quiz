@@ -6,7 +6,7 @@
     <div class="l-container l-pad">
       <h3>Tips and Advice</h3>
       <p>{{roomQuestions[thisQuestion].tip}}</p>
-      <router-link :to="{ name: room.name }">Back</router-link>
+      <a @click="checkEnd(room.name)">></a>
     </div>
   </div>
 </template>
@@ -26,7 +26,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getRoom', 'getRoomQuestions']),
+    ...mapGetters(['getRoom', 'getRoomQuestions', 'getQuestionsAnswered']),
     room () {
       const roomID = parseInt(this.thisRoom, 10)
       return this.getRoom(roomID)
@@ -34,6 +34,18 @@ export default {
     roomQuestions () {
       const roomID = parseInt(this.thisRoom, 10)
       return this.getRoomQuestions(roomID)
+    },
+    questionsAnswered () {
+      return this.getQuestionsAnswered
+    }
+  },
+  methods: {
+    checkEnd (routeRoom) {
+      if (this.questionsAnswered < 5) {
+        this.$router.push({ name: routeRoom })
+      } else {
+        this.$router.push({ name: 'end' })
+      }
     }
   },
   components: {
@@ -53,5 +65,8 @@ p {
   white-space: pre-line;
   color: #fff;
   font-size: 1.6rem;
+}
+a {
+  cursor: pointer;
 }
 </style>

@@ -11,6 +11,7 @@ export default new Vuex.Store({
       mel: 0,
       kaya: 0
     },
+    questionsAnswered: 0,
     students: [
       {
         id: 1,
@@ -80,9 +81,11 @@ export default new Vuex.Store({
     ],
     questions: [
       {
-        id: 1,
-        room: 1, // Communual Area,
+        id: 1, // Unique ID
+        room: 1, // Communual Area
+        relativeID: 1, // ID Relative to the room
         answered: false,
+        answer: 0,
         question: 'Your flatmates invite you out for dinner, but you don’t have enough money. What do you do?',
         answers: [
           {
@@ -115,9 +118,11 @@ export default new Vuex.Store({
              'There are lots of discounts offered to students – it’s worth researching what’s available in your local area. And shop around for the best deal.'
       },
       {
-        id: 2,
+        id: 2, // Unique ID
         room: 1, // Communual Area
+        relativeID: 2, // ID Relative to the room
         answered: false,
+        answer: 0,
         question: 'Your flatmate is stressed out about their coursework. They keep shutting themselves away in their room. What do you do?',
         answers: [
           {
@@ -150,9 +155,11 @@ export default new Vuex.Store({
              'Most universities also have people you can go to see for advice and support so it’s always worth checking this option out if you are struggling a bit.'
       },
       {
-        id: 1,
+        id: 3, // Unique ID
         room: 2, // Bedroom
+        relativeID: 1, // ID Relative to the room
         answered: false,
+        answer: 0,
         question: 'You’re trying to study for an exam in the morning, but your flatmate has friends over and they’re playing music and messing around in the kitchen, being really loud. What do you do?',
         answers: [
           {
@@ -185,9 +192,11 @@ export default new Vuex.Store({
              'Politely let your flatmates know when you’ve got important course dates coming up, so they can avoid organising loud gatherings and give you the time you need to concentrate on doing your best.'
       },
       {
-        id: 1,
+        id: 4, // Unique ID
         room: 3, // Kitchen
+        relativeID: 1, // ID Relative to the room
         answered: false,
+        answer: 0,
         question: 'The kitchen’s a mess and there’s a note on the fridge saying, ‘Stop stealing my milk!!!!’. What do you do?',
         answers: [
           {
@@ -220,9 +229,11 @@ export default new Vuex.Store({
              'Speak with your flatmates and agree how you want to organise your shared space. It can help to set some ‘house rules’ at the beginning so everyone knows what the expectation is and encourage everyone to follow them – even guests.'
       },
       {
-        id: 2,
+        id: 5, // Unique ID
         room: 3, // Kitchen
+        relativeID: 2, // ID Relative to the room
         answered: false,
+        answer: 0,
         question: 'When you first moved in, all the flatmates ate dinner together and had a laugh, but now people have gone off in their own little groups. You’re feeling a bit lonely. What do you do?',
         answers: [
           {
@@ -257,25 +268,27 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-    /* incrementAdvik (state, payload) {
-      state.user.score.advik += payload.amount
+    saveAnswer (state, payload) {
+      const q = this.getters.getCurrentQuestion(payload[0])
+      q.answered = true
+      q.answer = payload[1]
     },
-    incrementJake (state, payload) {
-      state.user.score.jake += payload.amount
+    incrementQuestionsAnswered (state) {
+      state.questionsAnswered++
+      console.log(state.questionsAnswered)
     },
-    incrementMel (state, payload) {
-      state.user.score.mel += payload.amount
-    },
-    incrementKaya (state, payload) {
-      state.user.score.kaya += payload.amount
-    } */
+    updateScore (state, payload) {
+      const s = this.getters.getScoreByName(payload)
+      console.log(s)
+    }
   },
   methods: {
-
   },
   getters: {
+    getQuestionsAnswered: state => state.questionsAnswered,
     // Score Getters
     getScore: state => state.score,
+    getScoreByName: state => payload => state.score.find(score => score.name === payload),
     // Student Getters
     getStudents: state => state.students,
     getStudent: state => payload => state.students.find(student => student.id === payload),
@@ -283,12 +296,21 @@ export default new Vuex.Store({
     // Room Getters
     getRooms: state => state.rooms,
     getRoom: state => payload => state.rooms.find(room => room.id === payload),
+    getRoomByName: state => payload => state.rooms.find(room => room.name === payload),
     // Question Getters
     getQuestions: state => state.questions,
-    getRoomQuestions: state => payload => state.questions.filter(question => question.room === payload)
-
+    getRoomQuestions: state => payload => state.questions.filter(question => question.room === payload),
+    getCurrentQuestion: state => payload => state.questions.find(question => question.id === payload)
   },
   actions: {
-
+    saveAnswer ({ commit }, payload) {
+      commit('saveAnswer', payload)
+    },
+    incrementQuestionsAnswered ({ commit }) {
+      commit('incrementQuestionsAnswered')
+    },
+    updateScore ({ commit }, payload) {
+      commit('updateScore', payload)
+    }
   }
 })

@@ -1,23 +1,27 @@
 <template>
   <div>
-    <div class="m-background__overlay-blue"></div>
-    <Brand />
-    <div class="l-container l-pad">
-      <p class="question">{{roomQuestions[thisQuestion].question}}</p>
-      <ul>
-          <li v-for="answer in roomQuestions[thisQuestion].answers" :key="answer.id">
-            <router-link :to="{ name: 'feedback', params: { room: thisRoom, question: roomQuestions[thisQuestion].id, answer:answer.id } }">
-              {{answer.text}}
-            </router-link>
-          </li>
-      </ul>
-    </div>
+    <Answered v-if="answered == true"></Answered>
+    <div v-else>
+      <div class="m-background__overlay-blue"></div>
+      <Brand />
+      <div class="l-container l-pad">
+        <p class="question">{{currentQuestion.question}}</p>
+        <ul>
+            <li v-for="answer in currentQuestion.answers" :key="answer.id">
+              <a @click="answerQuestion(currentQuestion.id, answer.id, thisRoom, currentQuestion.relativeID);" >
+                {{answer.text}}
+              </a>
+            </li>
+        </ul>
+      </div>
+    </div> <!-- End else -->
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 import Brand from '../components/Brand'
+import Answered from '../components/Answered'
 export default {
   data () {
     return {
@@ -35,12 +39,24 @@ export default {
       const roomID = parseInt(this.thisRoom, 10)
       return this.getRoomQuestions(roomID)
     },
-    score () {
-      return this.getScore
+    currentQuestion () {
+      return this.roomQuestions[this.thisQuestion]
+    },
+    answered () {
+      return this.roomQuestions[this.thisQuestion].answered
+    }
+  },
+  methods: {
+    ...mapActions(['saveAnswer', 'incrementQuestionsAnswered']),
+    answerQuestion (questionID, answerID, routeRoom, routeQuestion) {
+      this.saveAnswer([questionID, answerID])
+      this.incrementQuestionsAnswered()
+      this.$router.push({ name: 'feedback', params: { room: routeRoom, question: routeQuestion, answer: answerID } })
     }
   },
   components: {
-    Brand
+    Brand,
+    Answered
   },
   name: 'Question'
 }
@@ -56,9 +72,16 @@ ul {
   padding: 0;
 }
 li {
-  background: #fff;
   margin: 20px 0px;
-  padding: 20px;
-  border-radius: 10px;
+  a {
+    background: #fff;
+    display: list-item;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      background: #f2f2f2;
+    }
+  }
 }
 </style>

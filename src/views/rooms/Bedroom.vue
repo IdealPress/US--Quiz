@@ -5,7 +5,7 @@
     <div class="l-container">
       <div class="m-btn__nav" @click="showNav = true"><h4>Where to?</h4></div>
       <Navigation v-if="showNav" @close="showNav = false"></Navigation>
-      <router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].id } }">
+      <router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].relativeID } }">
         <div class="question-btn-1"></div>
       </router-link>
     </div>
