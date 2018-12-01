@@ -109,29 +109,29 @@ export default new Vuex.Store({
             id: 1,
             student: 'mel',
             weight: 1,
-            text: 'Politely decline because you don’t like spending money you don’t have, but offer up an alternative idea: You suggest a flat meal – everybody has a bit of food that you can cook up and maybe have some drinks with. That way, you don’t miss out and nobody needs to worry about money.',
-            feedback: require('@/assets/videos/feedback/common-area/question-1/mel.jpg')
+            text: 'Tell your flatmates to have fun, but stay in. You didn’t really want to go – you’ve a load of work to do and would rather save the money for emergencies.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/MEL2.mp4'
           },
           {
             id: 2,
             student: 'kaya',
             weight: 1,
             text: 'Go out anyway. You can’t afford it, but there’s no way you’re gonna be passing up this night out, so you put it on the credit card.',
-            feedback: require('@/assets/videos/feedback/common-area/question-1/kaya.jpg')
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/KAYA2.mp4'
           },
           {
             id: 3,
             student: 'jake',
             weight: 1,
-            text: 'Tell your flatmates to have fun, but stay in. You didn’t really want to go – you’ve a load of work to do and would rather save the money for emergencies.',
-            feedback: require('@/assets/videos/feedback/common-area/question-1/jake.jpg')
+            text: 'Ask your flatmates if you can borrow some money. You can always pay them back later when your student loan comes through, you’d be gutted to miss a night out.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/JAKE2.mp4'
           },
           {
             id: 4,
             student: 'advik',
             weight: 1,
-            text: 'Ask your flatmates if you can borrow some money. You can always pay them back later when your student loan comes through, you’d be gutted to miss a night out.',
-            feedback: require('@/assets/videos/feedback/common-area/question-1/advik.jpg')
+            text: 'Politely decline because you don’t like spending money you don’t have, but offer up an alternative idea: You suggest a flat meal – everybody has a bit of food that you can cook up and maybe have some drinks with. That way, you don’t miss out and nobody needs to worry about money.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/ADVIK2.mp4'
           }
         ],
         tip: 'Most students live on a budget. One of the best things you can do is to create your own budget sheet showing when you’ll receive money and how much you spend.' + '\n\n' +
@@ -150,29 +150,29 @@ export default new Vuex.Store({
             id: 1,
             student: 'mel',
             weight: 1,
-            text: 'Go in there and drag them out to a party. You’re sure they just need to lighten up a bit.',
-            feedback: require('@/assets/videos/feedback/common-area/question-2/mel.jpg')
+            text: 'Suggest that you study together and test each other on your coursework. Sometimes having a study buddy can make the learning easier.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/MEL4.mp4'
           },
           {
             id: 2,
             student: 'kaya',
             weight: 1,
-            text: 'Suggest that you study together and test each other on your coursework. Sometimes having a study buddy can make the learning easier.',
-            feedback: require('@/assets/videos/feedback/common-area/question-2/kaya.jpg')
+            text: 'Ignore them. What they choose to do is their business. You need to concentrate on your own exams.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/KAYA4.mp4'
           },
           {
             id: 3,
             student: 'jake',
             weight: 1,
-            text: 'Bring them a hot cup of tea and see if they feel like chatting about the things that are bothering them. It might help them to talk.',
-            feedback: require('@/assets/videos/feedback/common-area/question-2/jake.jpg')
+            text: 'Go in there and drag them out to a party. You’re sure they just need to lighten up a bit.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/JAKE4.mp4'
           },
           {
             id: 4,
             student: 'advik',
             weight: 1,
-            text: 'Ignore them. What they choose to do is their business. You need to concentrate on your own exams.',
-            feedback: require('@/assets/videos/feedback/common-area/question-2/advik.jpg')
+            text: 'Bring them a hot cup of tea and see if they feel like chatting about the things that are bothering them. It might help them to talk.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/ADVIK4.mp4'
           }
         ],
         tip: 'Everyone gets stressed, anxious or depressed at times. These moments can be particularly challenging if you’re living away from home for the first time.' + '\n\n' +
@@ -191,29 +191,29 @@ export default new Vuex.Store({
             id: 1,
             student: 'mel',
             weight: 1,
-            text: 'Put in some headphones. They don’t completely stop the noise, but you find it a bit easier to concentrate.',
-            feedback: require('@/assets/videos/feedback/bedroom/question-1/mel.jpg')
+            text: 'Grab your flatmate and politely ask him to get his friends to keep the noise down. They should understand the importance of exams and the need for quiet study time.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/MEL3.mp4'
           },
           {
             id: 2,
             student: 'kaya',
             weight: 1,
-            text: 'Grab your flatmate and politely ask him to get his friends to keep the noise down. They should understand the importance of exams and the need for quiet study time.',
-            feedback: require('@/assets/videos/feedback/bedroom/question-1/kaya.jpg')
+            text: 'Go into the kitchen and ask everyone to leave. This is your space and they can make noise in their own flat.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/KAYA3.mp4'
           },
           {
             id: 3,
             student: 'jake',
             weight: 1,
             text: 'Go into the kitchen and join them. You can just do a bit of binge-revision tomorrow morning before the exam.',
-            feedback: require('@/assets/videos/feedback/bedroom/question-1/jake.jpg')
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/JAKE3.mp4'
           },
           {
             id: 4,
             student: 'advik',
             weight: 1,
-            text: 'Go into the kitchen and ask everyone to leave. This is your space and they can make noise in their own flat.',
-            feedback: require('@/assets/videos/feedback/bedroom/question-1/advik.jpg')
+            text: 'Put in some headphones. They don’t completely stop the noise, but you find it a bit easier to concentrate.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/ADVIK3.mp4'
           }
         ],
         tip: 'Communication is the golden rule.' + '\n\n' +
@@ -232,29 +232,29 @@ export default new Vuex.Store({
             id: 1,
             student: 'mel',
             weight: 1,
-            text: 'Quickly give the kitchen a good clean and then pop out to the shops to buy a large milk – enough for everyone to share.',
-            feedback: require('@/assets/videos/feedback/kitchen/question-1/mel.jpg')
+            text: 'Call a meeting with everyone to talk through the problem suggesting putting together a roster showing when each flatmate is responsible for kitchen-cleaning and milk-buying duties.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/MEL5.mp4'
           },
           {
             id: 2,
             student: 'kaya',
             weight: 1,
-            text: 'Call a meeting with everyone to talk through the problem suggesting putting together a roster showing when each flatmate is responsible for kitchen-cleaning and milk-buying duties.',
-            feedback: require('@/assets/videos/feedback/kitchen/question-1/kaya.jpg')
+            text: 'Leave it and go out for dinner instead.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/KAYA5.mp4'
           },
           {
             id: 3,
             student: 'jake',
             weight: 1,
             text: 'Ignore it and make dinner. Most of the mess is probably yours anyway.',
-            feedback: require('@/assets/videos/feedback/kitchen/question-1/jake.jpg')
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/JAKE5.mp4'
           },
           {
             id: 4,
             student: 'advik',
             weight: 1,
-            text: 'Leave it and go out for dinner instead.',
-            feedback: require('@/assets/videos/feedback/kitchen/question-1/advik.jpg')
+            text: 'Quickly give the kitchen a good clean and then pop out to the shops to buy a large milk – enough for everyone to share.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/ADVIK5.mp4'
           }
         ],
         tip: 'Some of us find it easier to be tidier than others.' + '\n\n' +
@@ -273,29 +273,29 @@ export default new Vuex.Store({
             id: 1,
             student: 'mel',
             weight: 1,
-            text: 'Organise a flat party to bring all your flatmates together again. In fact, why not invite a few other friends from uni too – the more the merrier!',
-            feedback: require('@/assets/videos/feedback/kitchen/question-2/mel.jpg')
+            text: 'It doesn’t really bother you. You need to focus on getting some coursework done, so you decide to throw yourself into that.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/MEL6.mp4'
           },
           {
             id: 2,
             student: 'kaya',
             weight: 1,
-            text: 'It doesn’t really bother you. You need to focus on getting some coursework done, so you decide to throw yourself into that.',
-            feedback: require('@/assets/videos/feedback/kitchen/question-2/kaya.jpg')
+            text: 'Ignore the situation. Go out and meet up with other friends instead.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/KAYA6.mp4'
           },
           {
             id: 3,
             student: 'jake',
             weight: 1,
-            text: 'Cook a delicious dinner for everyone – surely the best way to coax everyone out of their rooms.',
-            feedback: require('@/assets/videos/feedback/kitchen/question-2/jake.jpg')
+            text: 'Organise a flat party to bring all your flatmates together again. In fact, why not invite a few other friends from uni too – the more the merrier!',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/JAKE6.mp4'
           },
           {
             id: 4,
             student: 'advik',
             weight: 1,
-            text: 'Ignore the situation. Go out and meet up with other friends instead.',
-            feedback: require('@/assets/videos/feedback/kitchen/question-2/advik.jpg')
+            text: 'Cook a delicious dinner for everyone – surely the best way to coax everyone out of their rooms.',
+            feedback: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/ADVIK6.mp4'
           }
         ],
         tip: 'It can be common for students to experience loneliness and feelings of isolation, especially if family and friends from school are far away.' + '\n\n' +
