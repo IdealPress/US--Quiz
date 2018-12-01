@@ -10,6 +10,7 @@ export default {
 
 <style scoped>
 img {
+  z-index: 1000;
   width: 150px;
   height: auto;
   position: absolute;

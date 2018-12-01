@@ -1,10 +1,11 @@
 .m-btn {
   display: block;
   position: relative;
-  padding: 0.8em 1em 0.5em 1em;;
+  padding: 0.7em 1em 0.5em 1em;;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
+  transition: background 0.4s;
   &:active { /*on click*/
     border-right: solid 3px transparent;
     border-bottom: solid 3px transparent;

@@ -4,6 +4,7 @@
       <router-link :to="{ name: 'intros' }">X</router-link> <h4>{{ studentByName.name }}</h4>
     </div>
     <Brand />
+    <VideoIntro v-if="showVideoIntro" @close="showVideoIntro = false" :url='studentByName.video'></VideoIntro>
     <div class="l-container">
       <div class="l--intros-left">
         <p class="capitalize"><span>Name:</span> {{ studentByName.name }}</p>
@@ -11,16 +12,14 @@
         <p><span>Studying:</span> {{ studentByName.studying }}</p>
         <p><span>Can be heard saying:</span> {{ studentByName.catchphrase }}</p>
         <p><span>Profile:</span> {{ studentByName.profile }}</p>
-        <router-link :to="{ name: 'reception' }">></router-link>
+        <router-link :to="{ name: 'reception' }" class="m-btn m-btn--left m-btn__secondary">See the rooms</router-link>
       </div>
       <img :src='studentByName.image' class="student-image">
       <div class="l--color-bg">
         <div class="p-video">
           <div class="p-speaker"></div>
-          <div class="p-frame">
-            <div @click="showModal = true"><h3>▶</h3></div>
-            <modal v-if="showModal" @close="showModal = false">
-            </modal>
+          <div class="p-frame" v-bind:style="{ backgroundImage: 'url(' + studentByName.frame + ')' }">
+            <div @click="showVideoIntro = true"><h1>▶</h1></div>
           </div>
           <div class="p-home"></div>
         </div>
@@ -32,13 +31,13 @@
 <script>
 import { mapGetters } from 'vuex'
 import Brand from '../../components/Brand'
-import Modal from '../../components/Modal'
+import Video from '../../components/Video'
 
 export default {
   data () {
     return {
       thisStudent: this.$route.params.id,
-      showModal: false
+      showVideoIntro: false
     }
   },
   computed: {
@@ -54,7 +53,7 @@ export default {
   },
   components: {
     Brand,
-    Modal
+    Video
   },
   name: 'Intro'
 }
@@ -78,7 +77,7 @@ img.student-image {
 .l--intros-left {
   padding: 30px 30px 0px;
   font-size: 1.1rem;
-  width: 35%;
+  width: 40%;
   top: 0;
 }
 .p-video {
@@ -103,8 +102,12 @@ img.student-image {
   background: #fff;
   display: flex;
   justify-content: center;
-  h3 {
+  background-size: cover;
+  > div {
+    cursor: pointer;
     align-self: center;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8)
   }
 }
 .p-home {

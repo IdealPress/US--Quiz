@@ -26,15 +26,16 @@ export default new Vuex.Store({
         result: 'You strike a good balance between your studies and opportunities to socialise and have fun. ' +
                 'You’re considerate of others. In fact, you’re so nice that you sometimes find it difficult to speak up about something that bothers you. ' +
                 'Remember that it’s important to get any problems out in the open, or they can escalate. ',
-        image: require('@/assets/images/students/advik-1.png')
-        // video: require('@/assets/videos/advik/advik-1.mp4')
+        image: require('@/assets/images/students/advik-1.png'),
+        frame: require('@/assets/images/phone/advik.png'),
+        video: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/ADVIK1.mp4'
       },
       {
         id: 2,
         name: 'jake',
         age: '19',
         studying: 'Drama',
-        catchphrase: 'Sorry, I’ve got a big exam coming up, so I can’t really hang out with you guys.',
+        catchphrase: 'Come on, even C’s get degrees. I’m going clubbing!',
         profile: 'Jake is the ultimate social animal. Whether he’s drinking in the local bars or at home, he takes the party wherever he goes. ' +
                  'What he lacks in tidiness, organisation and money management, he makes up for in heart. ' +
                  'He’s the first to apologise if he has upset someone. ' +
@@ -43,15 +44,16 @@ export default new Vuex.Store({
                 'But you also care about others and hate the thought of offending anyone. ' +
                 'Remember that, while there’s definitely time for socialising, students also need a good chunk of quiet study time. ' +
                 'Try to create a comfortable balance between work and play.',
-        image: require('@/assets/images/students/jake-1.png')
-        // video: require('@/assets/videos/jake/jake-1.mp4')
+        image: require('@/assets/images/students/jake-1.png'),
+        frame: require('@/assets/images/phone/jake.png'),
+        video: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/JAKE1.mp4'
       },
       {
         id: 3,
         name: 'mel',
         age: '20',
         studying: 'Civil Engineering',
-        catchphrase: 'Come on, even C’s get degrees. I’m going clubbing!',
+        catchphrase: 'Sorry, I’ve got a big exam coming up, so I can’t really hang out with you guys.',
         profile: 'Mel’s nice enough but the other flatmates don’t see much of her. ' +
                  'She’s at university to study, not to make friends. ' +
                  'But she’s super-organised and seen as the first port of call when something practical needs to get done. ' +
@@ -59,8 +61,9 @@ export default new Vuex.Store({
         result: 'You’re dedicated to your studies and prefer to focus on them rather than socialising. ' +
                 'Remember that friendship and support can help to motivate you and help you face any challenges. ' +
                 'Try to create a comfortable balance between work and play.',
-        image: require('@/assets/images/students/mel-1.png')
-        // video: require('@/assets/videos/mel/mel-1.mp4')
+        image: require('@/assets/images/students/mel-1.png'),
+        frame: require('@/assets/images/phone/mel.png'),
+        video: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/MEL1.mp4'
       },
       {
         id: 4,
@@ -74,8 +77,9 @@ export default new Vuex.Store({
         result: 'You’re very focused on your goals and you do everything you can to achieve them. ' +
                 'Remember that having a happy, comfortable living environment can help you feel more relaxed and able to concentrate. ' +
                 'It’s important to consider others as well as yourself.',
-        image: require('@/assets/images/students/kaya-1.png')
-        // video: require('@/assets/videos/kaya/kaya-1.mp4')
+        image: require('@/assets/images/students/kaya-1.png'),
+        frame: require('@/assets/images/phone/kaya.png'),
+        video: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/KAYA1.mp4'
       }
     ],
     rooms: [
