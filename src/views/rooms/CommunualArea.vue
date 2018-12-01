@@ -6,12 +6,12 @@
       <div class="m-btn__nav" @click="showNav = true"><h4>Where to?</h4></div>
       <Navigation v-if="showNav" @close="showNav = false"></Navigation>
     </div>
-    <router-link :to="{ name: 'question', params: {room: room.id, question: room.questions[0].id } }">
+    <!--<router-link :to="{ name: 'question', params: {room: room.id, question: room.questions[0].id } }">
       <div class="question-btn-1"></div>
     </router-link>
     <router-link :to="{ name: 'question', params: {room: room.id, question: room.questions[1].id } }">
       <div class="question-btn-2"></div>
-    </router-link>
+    </router-link>-->
   </div>
 </template>
 
