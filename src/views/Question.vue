@@ -3,10 +3,10 @@
     <div class="m-background__overlay-blue"></div>
     <Brand />
     <div class="l-container l-pad">
-      <p class="question">{{room.questions[thisQuestion].question}}</p>
+      <p class="question">{{roomQuestions[thisQuestion].question}}</p>
       <ul>
-          <li v-for="answer in room.questions[thisQuestion].answers" :key="answer.id">
-            <router-link :to="{ name: 'feedback', params: { room: thisRoom, question: thisQuestion + 1, answer:answer.id } }">
+          <li v-for="answer in roomQuestions[thisQuestion].answers" :key="answer.id">
+            <router-link :to="{ name: 'feedback', params: { room: thisRoom, question: roomQuestions[thisQuestion].id, answer:answer.id } }">
               {{answer.text}}
             </router-link>
           </li>
@@ -26,10 +26,17 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['getRoom']),
+    ...mapGetters(['getRoom', 'getRoomQuestions', 'getScore']),
     room () {
       const roomID = parseInt(this.thisRoom, 10)
       return this.getRoom(roomID)
+    },
+    roomQuestions () {
+      const roomID = parseInt(this.thisRoom, 10)
+      return this.getRoomQuestions(roomID)
+    },
+    score () {
+      return this.getScore
     }
   },
   components: {

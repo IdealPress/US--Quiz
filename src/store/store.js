@@ -81,7 +81,8 @@ export default new Vuex.Store({
     questions: [
       {
         id: 1,
-        room: 1, // Communual Area
+        room: 1, // Communual Area,
+        answered: false,
         question: 'Your flatmates invite you out for dinner, but you don’t have enough money. What do you do?',
         answers: [
           {
@@ -116,6 +117,7 @@ export default new Vuex.Store({
       {
         id: 2,
         room: 1, // Communual Area
+        answered: false,
         question: 'Your flatmate is stressed out about their coursework. They keep shutting themselves away in their room. What do you do?',
         answers: [
           {
@@ -150,6 +152,7 @@ export default new Vuex.Store({
       {
         id: 1,
         room: 2, // Bedroom
+        answered: false,
         question: 'You’re trying to study for an exam in the morning, but your flatmate has friends over and they’re playing music and messing around in the kitchen, being really loud. What do you do?',
         answers: [
           {
@@ -184,6 +187,7 @@ export default new Vuex.Store({
       {
         id: 1,
         room: 3, // Kitchen
+        answered: false,
         question: 'The kitchen’s a mess and there’s a note on the fridge saying, ‘Stop stealing my milk!!!!’. What do you do?',
         answers: [
           {
@@ -218,6 +222,7 @@ export default new Vuex.Store({
       {
         id: 2,
         room: 3, // Kitchen
+        answered: false,
         question: 'When you first moved in, all the flatmates ate dinner together and had a laugh, but now people have gone off in their own little groups. You’re feeling a bit lonely. What do you do?',
         answers: [
           {
@@ -252,11 +257,6 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-    answered (state, payload) {
-      const q = this.getters.getCurrentQuestion(payload[0])
-      q.answered = true
-      q.answer = payload[1]
-    }
     /* incrementAdvik (state, payload) {
       state.user.score.advik += payload.amount
     },
@@ -274,12 +274,19 @@ export default new Vuex.Store({
 
   },
   getters: {
+    // Score Getters
     getScore: state => state.score,
+    // Student Getters
     getStudents: state => state.students,
     getStudent: state => payload => state.students.find(student => student.id === payload),
     getStudentByName: state => payload => state.students.find(student => student.name === payload),
+    // Room Getters
     getRooms: state => state.rooms,
-    getRoom: state => payload => state.rooms.find(room => room.id === payload)
+    getRoom: state => payload => state.rooms.find(room => room.id === payload),
+    // Question Getters
+    getQuestions: state => state.questions,
+    getRoomQuestions: state => payload => state.questions.filter(question => question.room === payload)
+
   },
   actions: {
 

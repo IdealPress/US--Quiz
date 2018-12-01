@@ -5,12 +5,12 @@
     <div class="l-container">
       <div class="m-btn__nav" @click="showNav = true"><h4>Where to?</h4></div>
       <Navigation v-if="showNav" @close="showNav = false"></Navigation>
-      <!--<router-link :to="{ name: 'question', params: {room: room.id, question: room.questions[0].id } }">
+      <router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].id } }">
         <div class="question-btn-1"></div>
       </router-link>
-      <router-link :to="{ name: 'question', params: {room: room.id, question: room.questions[1].id } }">
+      <router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[1].id } }">
         <div class="question-btn-2"></div>
-      </router-link>-->
+      </router-link>
     </div>
   </div>
 </template>
@@ -31,9 +31,12 @@ export default {
     Navigation
   },
   computed: {
-    ...mapGetters(['getRoom']),
+    ...mapGetters(['getRoom', 'getRoomQuestions']),
     room () {
       return this.getRoom(3)
+    },
+    roomQuestions () {
+      return this.getRoomQuestions(3)
     }
   },
   name: 'Kitchen'
