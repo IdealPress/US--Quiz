@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>You've answered this question!</h3>
-    <a @click="back();">Go back</a>
+    <a @click="back();" class="m-btn m-btn--left m-btn__secondary"><span class="m-btn m-btn__back" style="display:inline-block; margin-top: -0.4em;"></span>Go back</a>
   </div>
 </template>
 
