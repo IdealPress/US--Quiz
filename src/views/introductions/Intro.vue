@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="l--header">
-      <router-link :to="{ name: 'intros' }">X</router-link> <h4>{{ studentByName.name }}</h4>
+      <router-link :to="{ name: 'intros' }"><span class="m-btn m-btn__cross" style="display:inline-block; margin-top: -0.4em;"></span></router-link> <h4>{{ studentByName.name }}</h4>
     </div>
     <Brand />
     <VideoIntro v-if="showVideoIntro" @close="showVideoIntro = false" :url='studentByName.video'></VideoIntro>
@@ -12,7 +12,7 @@
         <p><span>Studying:</span> {{ studentByName.studying }}</p>
         <p><span>Can be heard saying:</span> {{ studentByName.catchphrase }}</p>
         <p><span>Profile:</span> {{ studentByName.profile }}</p>
-        <router-link :to="{ name: 'reception' }" class="m-btn m-btn--left m-btn__secondary">See the rooms</router-link>
+        <router-link :to="{ name: 'reception' }" class="m-btn m-btn--left m-btn__secondary m-rooms">See the rooms &nbsp;<span class="m-btn__arrow" style="display:inline-block; margin-top: -0.4em;"></span></router-link>
       </div>
       <img :src='studentByName.image' class="student-image">
       <div class="l--color-bg">
@@ -31,7 +31,7 @@
 <script>
 import { mapGetters } from 'vuex'
 import Brand from '../../components/Brand'
-import Video from '../../components/Video'
+import VideoIntro from '../../components/VideoIntro'
 
 export default {
   data () {
@@ -53,7 +53,7 @@ export default {
   },
   components: {
     Brand,
-    Video
+    VideoIntro
   },
   name: 'Intro'
 }
@@ -77,13 +77,14 @@ img.student-image {
 .l--intros-left {
   padding: 30px 30px 0px;
   font-size: 1.1rem;
-  width: 40%;
+  width: 38%;
   top: 0;
 }
 .p-video {
-  width: 250px;
-  height: 425px;
-  margin-left: 35px;
+  width: 210px;
+  height: 395px;
+  margin-right: 30px;
+  float:right;
   background: #000;
   border-radius: 20px;
   display: inline-block;
@@ -96,8 +97,8 @@ img.student-image {
   margin: 20px auto;
 }
 .p-frame {
-  width: 225px;
-  height: 320px;
+  width: 195px;
+  height: 295px;
   margin: 10px auto;
   background: #fff;
   display: flex;
@@ -111,24 +112,28 @@ img.student-image {
   }
 }
 .p-home {
-  width: 80px;
-  height: 20px;
+  width: 70px;
+  height: 18px;
   border-radius: 10px;
   background: #333;
-  margin: 20px auto;
+  margin: 15px auto;
 }
 .l--color-bg {
   background: #A7DDE0;
   width: 45%;
-  padding: 20px 0px 0px 150px;
 }
 .l--header {
   width: 100%;
-  padding: 20px 0px 0px 30px;
+  padding: 0px 0px 0px 30px;
   background: #A7DDE0;
   h4 {
     display: inline-block;
-    margin-left: 20px;
+    margin: 25px 0px 25px 20px;
   }
+}
+.m-rooms {
+  position: absolute;
+  right: 30px;
+  bottom: 115px;
 }
 </style>

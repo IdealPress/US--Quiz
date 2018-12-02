@@ -4,8 +4,10 @@
     <div class="m-background__overlay"></div>
     <Brand />
     <div class="l-container l-pad">
-      <h3>From your answers, you're most like:</h3>
+      <h4>From your answers, you're most like:</h4>
       <h2>{{student.name}}</h2>
+      <p class="l--result">{{student.result}}</p>
+      <img :src='student.image' class="l--right">
     </div>
   </div>
 </template>
@@ -35,6 +37,15 @@ export default {
 }
 </script>
 
-<style>
+<style scoped lang='scss'>
+img.l--right {
+  margin-right: 70px;
+  width: 38%;
+}
+
+p.l--result {
+  width: 45%;
+  font-size: 1.5rem;
+}
 
 </style>
