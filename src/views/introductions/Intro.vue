@@ -75,7 +75,7 @@ img.student-image {
   height: auto;
 }
 .l--intros-left {
-  padding: 30px 30px 0px;
+  padding: 30px 40px 0px;
   font-size: 1.1rem;
   width: 38%;
   top: 0;
