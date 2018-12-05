@@ -5,11 +5,11 @@
         Your browser does not support the video tag.
       </video>
       <div id="video-controls" class="controls">
-        <button id="playPause" type="button" ref="playPause" data-state="play">Play/Pause</button>
+        <button id="playPause" ref="playPause" data-state="play"><div id="v-btn-wrapper"></div></button>
         <div class="progress" ref="progressBar" min="0">
            <span id="timeElapsed" ref="timeElapsed"></span>
         </div>
-        <button @click="$emit('close')">Close</button>
+        <button @click="$emit('close')"><div id="v-btn-wrapper" class="v-btn__close"></div></button>
       </div>
     </div>
 </template>
@@ -42,8 +42,10 @@ export default {
       if (type === 'playPause') {
         if (videoPlayer.paused || videoPlayer.ended) {
           playPause.setAttribute('data-state', 'play')
+          playPause.firstChild.className = 'v-btn__play'
         } else {
           playPause.setAttribute('data-state', 'pause')
+          playPause.firstChild.className = 'v-btn__pause'
         }
       }
     }
@@ -63,55 +65,26 @@ export default {
       percentage = (100 / duration) * currentTime
       timeElapsed.style.width = percentage + '%'
     })
-    /* progressBar.addEventListener('click', function (e) {
-      var pos = (e.pageX - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth
-      videoPlayer.currentTime = pos * videoPlayer.duration
-    }) */
   },
   name: 'VideoFeedback'
 }
 </script>
 
 <style scoped lang='scss'>
-.video-wrapper {
-  position: absolute;
-  z-index: 500;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  display: block;
-  transition: opacity .3s ease;
-  video {
-    height: 549px;
-    display: block;
-  }
-}
+
 .controls {
-  display: flex;
-  height: 51px;
   button {
-    background: rgba(182, 52, 139, 1);
-    border: none;
-    cursor: pointer;
+    background: rgba(182, 52, 139, 1); //
     &:hover {
-      background: rgb(142,41,109);
+      background: rgb(142,41,109); //
     }
   }
 }
 .controls .progress {
-  width:100%;
-  border:none;
-  height: 100%;
-  background: rgba(182, 52, 139, 1);
+  background: rgba(182, 52, 139, 1); //
 }
 .controls .progress span {
-   width:0%;
-   height:100%;
-   transition: width 0.6s;
-   display:inline-block;
-   background-color: rgb(142,41,109);
+   background-color: rgb(142,41,109); //
 }
 
 </style>

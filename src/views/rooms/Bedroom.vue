@@ -32,7 +32,7 @@ export default {
       return this.getRoom(2)
     },
     roomQuestions () {
-      return this.getRoomQuestions(2  )
+      return this.getRoomQuestions(2)
     }
   },
   mounted: function () {
