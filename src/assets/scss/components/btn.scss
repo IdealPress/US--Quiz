@@ -85,6 +85,7 @@
   cursor: pointer;
   border-top-right-radius: 10px;
   transition: background 0.4s;
+  z-index: 1;
 
   &:hover {
     background: rgba(129,206,211,1);

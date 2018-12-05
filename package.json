@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "marzipano": "^0.8.0",
     "openfl": "^7.0.0-beta.7",
     "swf-loader": "^1.0.1",
     "vue": "^2.5.2",
