@@ -4,8 +4,8 @@
     <div class="m-btn__nav" @click="showNav = true"><h4>Where to?</h4></div>
     <Navigation v-if="showNav" @close="showNav = false"></Navigation>
     <div id='pano'></div>
-    <div v-if="!roomQuestions[0].answered" id='question-1' class='question'><router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].relativeID } }"><div class='q-btn-active'></div></router-link></div>
-    <div v-else id='question-1' class='question'><router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].relativeID } }"><div class='q-btn-inactive'></div></router-link></div>
+    <div v-if="!roomQuestions[0].answered" id='question-1' class='q-btn'><router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].relativeID } }"><div class='q-btn-active'></div></router-link></div>
+    <div v-else id='question-1' class='q-btn'><router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].relativeID } }"><div class='q-btn-inactive'></div></router-link></div>
   </div>
 </template>
 

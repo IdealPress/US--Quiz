@@ -8,6 +8,7 @@
       <h2>{{student.name}}</h2>
       <p class="l--result">{{student.result}}</p>
       <img :src='student.image' class="l--right">
+      <div id="reset-wrapper"><a href="/"><div class="m-btn m-btn__primary m-btn--left">Start Again!</div></a></div>
     </div>
   </div>
 </template>
@@ -46,6 +47,7 @@ img.l--right {
 p.l--result {
   width: 45%;
   font-size: 1.5rem;
+  margin-bottom: 30px;
 }
 
 </style>
