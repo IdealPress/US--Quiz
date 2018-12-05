@@ -75,7 +75,7 @@ export default {
     // Display scene.
     scene.switchTo()
     scene.hotspotContainer().createHotspot(document.querySelector('#question-1'), { yaw: -3.85, pitch: 0 })
-    scene.hotspotContainer().createHotspot(document.querySelector('#question-2'), { yaw: -5.7, pitch: 0.26 })
+    scene.hotspotContainer().createHotspot(document.querySelector('#question-2'), { yaw: 1.37, pitch: 0.1 })
   },
   name: 'Kitchen'
 }
