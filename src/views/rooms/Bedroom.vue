@@ -4,7 +4,8 @@
     <div class="m-btn__nav" @click="showNav = true"><h4>Where to?</h4></div>
     <Navigation v-if="showNav" @close="showNav = false"></Navigation>
     <div id='pano'></div>
-    <div id='question-1' class='question'><router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].relativeID } }"><div class='info'></div></router-link></div>
+    <div v-if="!roomQuestions[0].answered" id='question-1' class='question'><router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].relativeID } }"><div class='q-btn-active'></div></router-link></div>
+    <div v-else id='question-1' class='question'><router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].relativeID } }"><div class='q-btn-inactive'></div></router-link></div>
   </div>
 </template>
 
@@ -70,7 +71,7 @@ export default {
     viewer.setIdleMovement(3000, autorotate)
     viewer.startMovement(autorotate)
     // Display scene.
-    scene.switchTo({ transitionDuration: 0 })
+    scene.switchTo()
     scene.hotspotContainer().createHotspot(document.querySelector('#question-1'), { yaw: -0.85, pitch: 0.3 })
   },
   name: 'Bedroom'
@@ -89,42 +90,5 @@ export default {
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
   -ms-content-zooming: none;
-}
-
-html, body {
-  width: 1024px;
-  height: 600px;
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  font-family: helvetica, sans-serif;
-}
-
-#pano {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1024px;
-  height: 600px;
-}
-
-.question {
-  width: 49px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: opacity 0.5s;
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
-.info {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  background-position: center;
-  background-size: cover;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDYgNDUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ2IDQ1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjMsMC44Yy0xMiwwLTIxLjcsOS43LTIxLjcsMjEuN1MxMSw0NC4yLDIzLDQ0LjJzMjEuNy05LjgsMjEuNy0yMS44UzM1LDAuOCwyMywwLjh6IE0yNC4yLDMwLjVjMCwwLjUtMC4yLDAuOC0wLjQsMWMtMC4yLDAuMi0wLjUsMC40LTAuOSwwLjRIMjJjLTAuNSwwLTAuOC0wLjItMS0wLjRjLTAuMi0wLjItMC40LTAuNS0wLjQtMXYtMS40YzAtMC41LDAuMi0wLjgsMC40LTFjMC4yLTAuMiwwLjUtMC40LDEtMC40aDAuOGMwLjUsMCwwLjgsMC4yLDEsMC40YzAuMiwwLjIsMC40LDAuNSwwLjQsMVYzMC41eiBNMjguNiwyMS42Yy0wLjMsMC42LTAuNywxLjItMS4yLDEuNmMtMC41LDAuNC0xLDAuOC0xLjcsMWMtMC41LDAuMi0xLjEsMC4zLTEuNiwwLjN2MS4yYzAsMC41LTAuMiwwLjgtMC40LDFjLTAuMiwwLjItMC41LDAuNC0wLjksMC40SDIyYy0wLjUsMC0wLjgtMC4yLTEtMC40Yy0wLjItMC4yLTAuNC0wLjUtMC40LTAuOXYtMy4xYzAtMC41LDAuMi0wLjgsMC40LTFjMC4yLTAuMiwwLjUtMC40LDEtMC40aDEuOWMwLjUsMCwxLTAuMiwxLjMtMC41YzAuMy0wLjMsMC41LTAuOCwwLjUtMS4zYzAtMC4zLDAtMC41LTAuMS0wLjdjLTAuMS0wLjItMC4yLTAuNC0wLjQtMC42Yy0wLjItMC4yLTAuNC0wLjMtMC42LTAuNGMtMC4yLTAuMS0wLjQtMC4xLTAuNy0wLjFoLTMuM2MtMC41LDAtMC44LTAuMi0xLTAuNGMtMC4yLTAuMi0wLjQtMC41LTAuNC0xdi0wLjdjMC0wLjUsMC4yLTAuOCwwLjQtMWMwLjItMC4yLDAuNS0wLjQsMS0wLjRoMy4xYzAuNywwLDEuNCwwLjEsMiwwLjNjMC42LDAuMiwxLjIsMC42LDEuNywxYzAuNSwwLjQsMC45LDEsMS4yLDEuNmMwLjMsMC42LDAuNCwxLjMsMC40LDIuMUMyOSwyMC4zLDI4LjksMjEsMjguNiwyMS42eiIvPjwvc3ZnPg==);
 }
 </style>

@@ -19,7 +19,6 @@
 let vm = null
 let videoPlayer = null
 let playPause = null
-let progressBar = null
 let timeElapsed = null
 let duration = null
 let percentage = null
@@ -31,12 +30,7 @@ export default {
     vm = this
     videoPlayer = vm.$refs.videoPlayer
     playPause = vm.$refs.playPause
-    progressBar = vm.$refs.progressBar
     timeElapsed = vm.$refs.timeElapsed
-    console.log(videoPlayer)
-    console.log(playPause)
-    console.log(progressBar)
-    console.log(timeElapsed)
     var changeButtonState = function (type) {
       // Play/Pause button
       if (type === 'playPause') {

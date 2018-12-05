@@ -6,7 +6,7 @@
     <div class="l-container l-pad">
       <h3>Tips and Advice</h3>
       <p>{{roomQuestions[thisQuestion].tip}}</p>
-      <a @click="checkEnd(room.name)"><span class="m-btn__arrow" style="display:inline-block; margin-top: -0.4em;"></span></a>
+      <a @click="checkEnd(room.name)"><span class="m-btn__arrow" style="width: 40px; display:inline-block; margin-top: -0.4em;"></span></a>
     </div>
   </div>
 </template>

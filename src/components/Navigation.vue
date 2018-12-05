@@ -5,7 +5,7 @@
       <router-link :to="{ name: 'communual-area' }"><div class="m-btn m-btn__primary">Communual Area</div></router-link>
       <router-link :to="{ name: 'bedroom' }"><div class="m-btn m-btn__primary">Bedroom</div></router-link>
       <router-link :to="{ name: 'kitchen' }"><div class="m-btn m-btn__primary">Kitchen</div></router-link>
-      <div v-if="this.$route.name != 'reception'" class="nav-close" @click="$emit('close')"><h5>X</h5></div>
+      <div v-if="this.$route.name != 'reception'" class="nav-close" @click="$emit('close')"><div class="m-btn__cross"></div></div>
     </div>
   </div>
 </template>
@@ -35,11 +35,8 @@ export default {
 .nav-close {
   cursor: pointer;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  h5 {
-    color: #fff;
-  }
+  top: 10px;
+  right: 10px;
 }
 
 .m-btn {
