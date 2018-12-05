@@ -107,8 +107,11 @@ img.student-image {
   > div {
     cursor: pointer;
     align-self: center;
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.8)
+    color: rgba(255, 255, 255, 1);
+    animation: glowing 5000ms infinite;
+    &:hover {
+      animation-name: none;
+    }
   }
 }
 .p-home {

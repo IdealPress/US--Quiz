@@ -6,7 +6,7 @@
     <div class="l-container l-pad">
       <h3>Tips and Advice</h3>
       <p>{{roomQuestions[thisQuestion].tip}}</p>
-      <a @click="checkEnd(room.name)"><span class="m-btn__arrow" style="width: 40px; display:inline-block; margin-top: -0.4em;"></span></a>
+      <a @click="checkEnd(room.name)"><span class="m-btn__arrow m-btn__feedback"></span></a>
     </div>
   </div>
 </template>
@@ -71,5 +71,11 @@ a {
   position: absolute;
   right: 30px;
   bottom: 30px;
+}
+.m-btn__feedback {
+  width: 50px;
+  height: 50px;
+  display:inline-block;
+  margin-top: -0.4em;
 }
 </style>
