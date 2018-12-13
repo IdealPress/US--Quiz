@@ -11,7 +11,7 @@ export default new Vuex.Store({
       { name: 'mel', score: 0 },
       { name: 'kaya', score: 0 }
     ],
-    questionsAnswered: 0,
+    instructions: false,
     students: [
       {
         id: 1,
@@ -32,6 +32,23 @@ export default new Vuex.Store({
       },
       {
         id: 2,
+        name: 'mel',
+        age: '20',
+        studying: 'Civil Engineering',
+        catchphrase: 'Sorry, I’ve got a big exam coming up, so I can’t really hang out with you guys.',
+        profile: 'Mel’s nice enough but the other flatmates don’t see much of her. ' +
+                 'She’s at university to study, not to make friends. ' +
+                 'But she’s super-organised and seen as the first port of call when something practical needs to get done. ' +
+                 'She’s sensible with money (in fact, she keeps a spreadsheet of expenses) and likes to keep the place clean and tidy.',
+        result: 'You’re dedicated to your studies and prefer to focus on them rather than socialising. ' +
+                'Remember that friendship and support can help to motivate you and help you face any challenges. ' +
+                'Try to create a comfortable balance between work and play.',
+        image: require('@/assets/images/students/mel-1.png'),
+        frame: require('@/assets/images/phone/mel.png'),
+        video: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/MEL1.mp4'
+      },
+      {
+        id: 3,
         name: 'jake',
         age: '19',
         studying: 'Drama',
@@ -47,23 +64,6 @@ export default new Vuex.Store({
         image: require('@/assets/images/students/jake-1.png'),
         frame: require('@/assets/images/phone/jake.png'),
         video: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/JAKE1.mp4'
-      },
-      {
-        id: 3,
-        name: 'mel',
-        age: '20',
-        studying: 'Civil Engineering',
-        catchphrase: 'Sorry, I’ve got a big exam coming up, so I can’t really hang out with you guys.',
-        profile: 'Mel’s nice enough but the other flatmates don’t see much of her. ' +
-                 'She’s at university to study, not to make friends. ' +
-                 'But she’s super-organised and seen as the first port of call when something practical needs to get done. ' +
-                 'She’s sensible with money (in fact, she keeps a spreadsheet of expenses) and likes to keep the place clean and tidy.',
-        result: 'You’re dedicated to your studies and prefer to focus on them rather than socialising. ' +
-                'Remember that friendship and support can help to motivate you and help you face any challenges. ' +
-                'Try to create a comfortable balance between work and play.',
-        image: require('@/assets/images/students/mel-1.png'),
-        frame: require('@/assets/images/phone/mel.png'),
-        video: 'http://waf.not-working.co.uk/unite-students/_VIDEOS/MEL1.mp4'
       },
       {
         id: 4,

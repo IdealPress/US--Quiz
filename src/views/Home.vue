@@ -4,7 +4,7 @@
     <div class="m-background__overlay"></div>
     <img  class="leap" src="../assets/images/logos/leap-skills.png">
     <div class="l-container l-pad">
-      <img class="l--right" src="../assets/images/students/students__all.png">
+      <img class="l--right" src="../assets/images/students/students__all-2.png">
       <img src="../assets/images/logos/logo__unite.png">
       <h1 class="l__splash">Are you ready for the leap?</h1>
       <router-link class="m-btn m-btn--left m-btn__primary"

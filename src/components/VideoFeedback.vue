@@ -9,7 +9,7 @@
         <div class="progress" ref="progressBar" min="0">
            <span id="timeElapsed" ref="timeElapsed"></span>
         </div>
-        <button @click="$emit('close')"><div id="v-btn-wrapper" class="v-btn__close"></div></button>
+        <button @click="$emit('close')"><div ref="continueArrow" class="m-btn__arrow"></div></button>
       </div>
     </div>
 </template>
@@ -23,6 +23,7 @@ let timeElapsed = null
 let duration = null
 let percentage = null
 let currentTime = null
+let continueArrow = null
 
 export default {
   props: ['url'],
@@ -31,12 +32,14 @@ export default {
     videoPlayer = vm.$refs.videoPlayer
     playPause = vm.$refs.playPause
     timeElapsed = vm.$refs.timeElapsed
+    continueArrow = vm.$refs.continueArrow
     var changeButtonState = function (type) {
       // Play/Pause button
       if (type === 'playPause') {
         if (videoPlayer.paused || videoPlayer.ended) {
           playPause.setAttribute('data-state', 'play')
           playPause.firstChild.className = 'v-btn__play'
+          continueArrow.classList.add('complete')
         } else {
           playPause.setAttribute('data-state', 'pause')
           playPause.firstChild.className = 'v-btn__pause'
@@ -79,6 +82,16 @@ export default {
 }
 .controls .progress span {
    background-color: rgb(142,41,109); //
+}
+
+.m-btn__arrow {
+  opacity: 0.25;
+  transition: opacity 0.5s;
+  margin: 0px 3px 12px 3px;
+}
+
+.complete {
+  opacity: 1;
 }
 
 </style>
