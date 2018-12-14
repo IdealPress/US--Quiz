@@ -11,7 +11,7 @@ export default new Vuex.Store({
       { name: 'mel', score: 0 },
       { name: 'kaya', score: 0 }
     ],
-    instructions: false,
+    questionsAnswered: 0,
     students: [
       {
         id: 1,
