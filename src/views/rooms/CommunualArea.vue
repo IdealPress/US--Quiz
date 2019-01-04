@@ -43,8 +43,8 @@ export default {
     var viewer = new Marzipano.Viewer(document.getElementById('pano'))
     // Create source.
     var source = Marzipano.ImageUrlSource.fromString(
-      '//waf.not-working.co.uk/unite-students/tiles/commonroom/{z}/{f}/{y}/{x}.jpg',
-      { cubeMapPreviewUrl: '//waf.not-working.co.uk/unite-students/tiles/commonroom/preview.jpg' })
+      '/static/tiles/commonroom/{z}/{f}/{y}/{x}.jpg',
+      { cubeMapPreviewUrl: '/static/tiles/commonroom/preview.jpg' })
 
     // Create geometry.
     var geometry = new Marzipano.CubeGeometry([
