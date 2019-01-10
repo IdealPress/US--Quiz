@@ -97,10 +97,17 @@
 /* QUESITON BUTTONS */
 
 @keyframes glowing {
-  0% { opacity: 1 }
-  40% { opacity: 0.8 }
-  60% { opacity: 0.8 }
-  100% { opacity: 1 }
+  0% { opacity: 0.8 }
+  40% { opacity: 1 }
+  60% { opacity: 1 }
+  100% { opacity: 0.8 }
+}
+
+@keyframes scale {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.2); }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 .q-btn-active {
@@ -108,7 +115,7 @@
   height: 100%;
   opacity: 1;
   background-position: center;
-  animation: glowing 2000ms infinite;
+  animation: glowing 2000ms infinite, scale 2000ms infinite;
   border-radius: 60%;
   background-size: cover;
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDYgNDUiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ2IDQ1OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRDczRTt9PC9zdHlsZT48cGF0aCBjbGFzcz0ic3QwIiBkPSJNMjMsMC44Yy0xMiwwLTIxLjcsOS43LTIxLjcsMjEuN1MxMSw0NC4yLDIzLDQ0LjJzMjEuNy05LjgsMjEuNy0yMS44UzM1LDAuOCwyMywwLjh6IE0yNC4yLDMwLjVjMCwwLjUtMC4yLDAuOC0wLjQsMWMtMC4yLDAuMi0wLjUsMC40LTAuOSwwLjRIMjJjLTAuNSwwLTAuOC0wLjItMS0wLjRjLTAuMi0wLjItMC40LTAuNS0wLjQtMXYtMS40YzAtMC41LDAuMi0wLjgsMC40LTFjMC4yLTAuMiwwLjUtMC40LDEtMC40aDAuOGMwLjUsMCwwLjgsMC4yLDEsMC40YzAuMiwwLjIsMC40LDAuNSwwLjQsMVYzMC41eiBNMjguNiwyMS42Yy0wLjMsMC42LTAuNywxLjItMS4yLDEuNmMtMC41LDAuNC0xLDAuOC0xLjcsMWMtMC41LDAuMi0xLjEsMC4zLTEuNiwwLjN2MS4yYzAsMC41LTAuMiwwLjgtMC40LDFjLTAuMiwwLjItMC41LDAuNC0wLjksMC40SDIyYy0wLjUsMC0wLjgtMC4yLTEtMC40Yy0wLjItMC4yLTAuNC0wLjUtMC40LTAuOXYtMy4xYzAtMC41LDAuMi0wLjgsMC40LTFjMC4yLTAuMiwwLjUtMC40LDEtMC40aDEuOWMwLjUsMCwxLTAuMiwxLjMtMC41YzAuMy0wLjMsMC41LTAuOCwwLjUtMS4zYzAtMC4zLDAtMC41LTAuMS0wLjdjLTAuMS0wLjItMC4yLTAuNC0wLjQtMC42Yy0wLjItMC4yLTAuNC0wLjMtMC42LTAuNGMtMC4yLTAuMS0wLjQtMC4xLTAuNy0wLjFoLTMuM2MtMC41LDAtMC44LTAuMi0xLTAuNGMtMC4yLTAuMi0wLjQtMC41LTAuNC0xdi0wLjdjMC0wLjUsMC4yLTAuOCwwLjQtMWMwLjItMC4yLDAuNS0wLjQsMS0wLjRoMy4xYzAuNywwLDEuNCwwLjEsMiwwLjNjMC42LDAuMiwxLjIsMC42LDEuNywxYzAuNSwwLjQsMC45LDEsMS4yLDEuNmMwLjMsMC42LDAuNCwxLjMsMC40LDIuMUMyOSwyMC4zLDI4LjksMjEsMjguNiwyMS42eiIvPjwvc3ZnPg==);

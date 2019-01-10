@@ -2,6 +2,7 @@
   <div>
     <Brand />
     <div class="m-btn__nav" @click="showNav = true"><h4>Where to?</h4></div>
+    <Instruction />
     <Navigation v-if="showNav" @close="showNav = false"></Navigation>
     <div id='pano'></div>
     <div v-if="!roomQuestions[0].answered" id='question-1' class='q-btn'><router-link :to="{ name: 'question', params: {room: room.id, question: roomQuestions[0].relativeID } }"><div class='q-btn-active'></div></router-link></div>
@@ -13,6 +14,7 @@
 import { mapGetters } from 'vuex'
 import Brand from '../../components/Brand'
 import Navigation from '../../components/Navigation'
+import Instruction from '../../components/Instruction'
 import Vue from 'vue'
 var Marzipano = require('../../../node_modules/marzipano')
 Vue.use(Marzipano)
@@ -25,7 +27,8 @@ export default {
   },
   components: {
     Brand,
-    Navigation
+    Navigation,
+    Instruction
   },
   computed: {
     ...mapGetters(['getRoom', 'getRoomQuestions']),
