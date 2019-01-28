@@ -13,6 +13,7 @@
   "dependencies": {
     "array.prototype.find": "^2.0.4",
     "babel-polyfill": "^6.26.0",
+    "es6-promise": "^4.2.5",
     "marzipano": "^0.8.0",
     "openfl": "^7.1.2",
     "swf-loader": "^1.0.1",
