@@ -11,6 +11,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.2.5",
     "array.prototype.find": "^2.0.4",
     "babel-polyfill": "^6.26.0",
     "es6-promise": "^4.2.5",
