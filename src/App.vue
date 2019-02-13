@@ -1,12 +1,18 @@
 <template>
   <div class="l-app-wrap">
+    <ScreenTooSmall />
     <router-view/>
   </div>
 </template>
 
 <script>
+import ScreenTooSmall from './components/ScreenTooSmall';
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    ScreenTooSmall
+  },
 }
 </script>
 
