@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import ScreenTooSmall from './components/ScreenTooSmall';
+import ScreenTooSmall from './components/ScreenTooSmall'
 
 export default {
   name: 'App',
   components: {
     ScreenTooSmall
-  },
+  }
 }
 </script>
 
@@ -22,7 +22,7 @@ body {
 }
 .l-app-wrap {
   position: relative;
-  width: 1024px;
+  width: 1020px;
   height: 600px;
   margin: auto;
   overflow: hidden;

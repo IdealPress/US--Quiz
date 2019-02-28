@@ -28,7 +28,7 @@ export default {
     padding: 30px;
   }
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1020px) {
     .v-wrapper {
       z-index: 1001;
       display: flex;
