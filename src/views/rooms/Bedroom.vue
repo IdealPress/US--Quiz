@@ -39,6 +39,23 @@ export default {
       return this.getRoomQuestions(2)
     }
   },
+  created: function () {
+    this.updateNav()
+  },
+  methods: {
+    updateNav: function () {
+      let q = this.getRoomQuestions(2)
+      let a = []
+      for (let index = 0; index < q.length; ++index) {
+        a.push(q[index].answered)
+      }
+      if (Object.keys(a).every(i => a[i])) {
+        this.showNav = true
+      } else {
+        this.showNav = false
+      }
+    }
+  },
   mounted: function () {
     // Create viewer.
     var viewer = new Marzipano.Viewer(document.getElementById('pano'))

@@ -39,28 +39,23 @@ export default {
     },
     roomQuestions () {
       return this.getRoomQuestions(1)
-    },
-    allAnswered () {
+    }
+  },
+  created: function () {
+    this.updateNav()
+  },
+  methods: {
+    updateNav: function () {
       let q = this.getRoomQuestions(1)
       let a = []
       for (let index = 0; index < q.length; ++index) {
         a.push(q[index].answered)
       }
       if (Object.keys(a).every(i => a[i])) {
-        return true
+        this.showNav = true
       } else {
-        return false
+        this.showNav = false
       }
-    }
-  },
-  watch: {
-    allAnswered: function (n) {
-      this.updateNav()
-    }
-  },
-  methods: {
-    updateNav: function () {
-      this.showNav = true
     }
   },
   mounted: function () {
