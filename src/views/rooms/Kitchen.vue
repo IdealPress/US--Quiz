@@ -63,7 +63,7 @@ export default {
     var viewer = new Marzipano.Viewer(document.getElementById('pano'))
     // Create source.
     var source = Marzipano.ImageUrlSource.fromString(
-      '///static/tiles/kitchen/{z}/{f}/{y}/{x}.jpg',
+      '/static/tiles/kitchen/{z}/{f}/{y}/{x}.jpg',
       { cubeMapPreviewUrl: '/static/tiles/kitchen/preview.jpg' })
 
     // Create geometry.
