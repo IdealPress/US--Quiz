@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="l--header">
-      <router-link :to="{ name: 'intros' }"><span class="m-btn m-btn__cross" style="display:inline-block; margin-top: -0.4em;"></span></router-link> <h4>{{ studentByName.name }}</h4>
+      <h4>{{ studentByName.name }}</h4>
     </div>
     <Brand />
     <VideoIntro v-if="showVideoIntro" @close="showVideoIntro = false" :url='studentByName.video'></VideoIntro>
@@ -12,6 +12,7 @@
         <p><span>Studying:</span> {{ studentByName.studying }}</p>
         <p><span>Can be heard saying:</span> {{ studentByName.catchphrase }}</p>
         <p><span>Profile:</span> {{ studentByName.profile }}</p>
+        <div class="back-btn"><router-link :to="{ name: 'intros' }"><span class="m-btn m-btn__arrow-left" style="display:inline-block; margin-top: -0.4em;"></span>Back to students</router-link></div>
         <router-link :to="{ name: 'reception' }" class="m-btn m-btn--left m-btn__secondary m-rooms">See the rooms &nbsp;<span class="m-btn__arrow" style="display:inline-block; margin-top: -0.4em;"></span></router-link>
       </div>
       <img :src='studentByName.image' class="student-image">
@@ -76,7 +77,7 @@ img.student-image {
 }
 .l--intros-left {
   padding: 30px 40px 0px;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   width: 38%;
   top: 0;
 }
@@ -127,7 +128,7 @@ img.student-image {
 }
 .l--header {
   width: 100%;
-  padding: 0px 0px 0px 30px;
+  padding: 0px 0px 0px 20px;
   background: #A7DDE0;
   h4 {
     display: inline-block;
@@ -138,5 +139,13 @@ img.student-image {
   position: absolute;
   right: 30px;
   bottom: 115px;
+}
+.back-btn {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 0.4em 0em 0em;
+  a {
+    color: #000;
+  }
 }
 </style>
