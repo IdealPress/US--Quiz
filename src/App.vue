@@ -2,6 +2,7 @@
   <div class="l-app-wrap">
     <ScreenTooSmall />
     <router-view/>
+    <MainFooter />
   </div>
 </template>
 
@@ -18,15 +19,16 @@ export default {
 
 <style>
 body {
-  background: #222;
+  background: #272727;
+  background-image:url(./assets/images/logo-background.png);
 }
 .l-app-wrap {
   position: relative;
   width: 1020px;
-  height: 600px;
+  height: 800px;
   margin: auto;
   overflow: hidden;
-  background: #fff;
+  background: #272727;
 }
 .container {
   padding: 10px;

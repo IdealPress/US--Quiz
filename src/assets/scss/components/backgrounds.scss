@@ -10,7 +10,9 @@
 }
 
 .m-background--media-1 {
-  background-image:url('~@/assets/images/backgrounds/bg__exterior.jpg');
+  /*background-image:url('~@/assets/images/backgrounds/bg__exterior.jpg');*/
+  background-image: linear-gradient($color-bg-yellow, $color-bg-yellow-dark);
+  height:600px;
 }
 .m-background--media-2 {
   background-image:url('~@/assets/images/backgrounds/bg__reception.jpg');

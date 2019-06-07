@@ -15,12 +15,39 @@ $base-font-size-for-rem-calc: 16;
 // Font type
 
 @font-face {
-  font-family: 'SciFly';
-  src: url('~@/assets/fonts/SciFly-Sans.woff') format('woff');
+  font-family: 'Lato';
+  src: url('~@/assets/fonts/Lato-Black.woff') format('woff');
+}
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url('~@/assets/fonts/OpenSans-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'OpenSansSemi';
+  src: url('~@/assets/fonts/OpenSans-SemiBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url('~@/assets/fonts/OpenSans-Bold.woff') format('woff');
 }
 
 @mixin font() {
-  font-family: 'SciFly';
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+}
+@mixin font-regular() {
+  font-family: 'OpenSansRegular';
   font-style: normal;
   font-weight: 400;
+}
+@mixin font-semibold() {
+  font-family: 'OpenSansSemi';
+  font-style: normal;
+  font-weight: 500;
+}
+@mixin font-bold() {
+  font-family: 'OpenSansBold';
+  font-style: bold;
+  font-weight: 800;
 }
