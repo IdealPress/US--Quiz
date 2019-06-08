@@ -1,18 +1,17 @@
 <template>
   <div>
-    <div class="l--header">
+    <div class="m-background m-background--media-1"></div>
       <h4>{{ studentByName.name }}</h4>
-    </div>
-    <Brand />
-    <VideoIntro v-if="showVideoIntro" @close="showVideoIntro = false" :url='studentByName.video'></VideoIntro>
+      <Brand />
+      <VideoIntro v-if="showVideoIntro" @close="showVideoIntro = false" :url='studentByName.video'></VideoIntro>
     <div class="l-container">
       <div class="l--intros-left">
-        <p class="capitalize"><span>Name:</span> {{ studentByName.name }}</p>
-        <p><span>Age:</span> {{ studentByName.age }}</p>
-        <p><span>Studying:</span> {{ studentByName.studying }}</p>
-        <p><span>Can be heard saying:</span> {{ studentByName.catchphrase }}</p>
-        <p><span>Profile:</span> {{ studentByName.profile }}</p>
-        <div class="back-btn"><router-link :to="{ name: 'intros' }"><span class="m-btn m-btn__arrow-left" style="display:inline-block; margin-top: -0.4em;"></span>Back to students</router-link></div>
+        <p><strong>Name:</strong> {{ studentByName.name }}</p>
+        <p><strong>Age:</strong> {{ studentByName.age }}</p>
+        <p><strong>Studying:</strong> {{ studentByName.studying }}</p>
+        <p><strong>Can be heard saying:</strong> {{ studentByName.catchphrase }}</p>
+        <p><strong>Profile:</strong> {{ studentByName.profile }}</p>
+        <!--<div class="back-btn"><router-link :to="{ name: 'intros' }"><span class="m-btn m-btn__arrow-left" style="display:inline-block; margin-top: -0.4em;"></span>Back to students</router-link></div>-->
         <router-link :to="{ name: 'reception' }" class="m-btn m-btn--left m-btn__secondary m-rooms">See the rooms &nbsp;<span class="m-btn__arrow" style="display:inline-block; margin-top: -0.4em;"></span></router-link>
       </div>
       <img :src='studentByName.image' class="student-image">
@@ -25,6 +24,10 @@
           <div class="p-home"></div>
         </div>
       </div>
+    </div>
+    <div class="footer">
+      <p><strong>As the UK's largest student accommodation provider, Unite Students has spent years providing a home for success for young people, supporting them to thrive while they make the big 'Leap' to university life.</strong></p>
+        <p>Our insight reports have identified a significant gap in teenagers’ expectations of what life will be like living away at university. We know that by better equipping young people for the leap to university, the better they will overcome the challenges ahead. Please click here to find out more about <a href="#" class="text">The Leap</a>.</p>
     </div>
   </div>
 </template>
@@ -71,15 +74,20 @@ span {
 img.student-image {
   position: absolute;
   left: 350px;
+  bottom:0;
   width: 40%;
   transform: translateY(-100px);
   height: auto;
 }
 .l--intros-left {
-  padding: 30px 40px 0px;
+  padding: 20px 40px 0px;
   font-size: 1.05rem;
-  width: 38%;
+  width: 42%;
   top: 0;
+}
+.l--intros-left p {
+  font-size:85%;
+
 }
 .p-video {
   width: 210px;
@@ -123,15 +131,16 @@ img.student-image {
   margin: 15px auto;
 }
 .l--color-bg {
-  background: #A7DDE0;
+  /*background: #A7DDE0;*/
   width: 45%;
 }
 .l--header {
   width: 100%;
   padding: 0px 0px 0px 20px;
-  background: #A7DDE0;
+  z-index:1;
+  /*background: #A7DDE0;*/
   h4 {
-    display: inline-block;
+    display: block;
     margin: 25px 0px 25px 20px;
   }
 }

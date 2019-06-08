@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="m-background m-background--media-1"></div>
-    <div class="m-background__overlay"></div>
     <Brand />
     <div class="l-container l-pad">
       <h3>Meet the students</h3>
@@ -39,5 +38,6 @@ export default {
 </script>
 
 <style>
-
+.footer {padding:40px;text-align:center;background-color:#222;}
+.footer p {font-weight:normal;color:#fff;}
 </style>
